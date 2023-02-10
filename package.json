@@ -18,5 +18,8 @@
   },
   "engines": {
     "node": "^16.18"
+  },
+  "dependencies": {
+    "passport": "^0.5.3"
   }
 }
