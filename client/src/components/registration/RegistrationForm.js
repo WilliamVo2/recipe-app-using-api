@@ -7,14 +7,14 @@ const RegistrationForm = () => {
     email: "",
     password: "",
     passwordConfirmation: "",
-  });
+  })
 
   const [errors, setErrors] = useState({});
 
   const [shouldRedirect, setShouldRedirect] = useState(false);
 
   const validateInput = (payload) => {
-    setErrors({});
+    setErrors({})
     const { email, password, passwordConfirmation } = payload;
     const emailRegexp = config.validation.email.regexp;
     let newErrors = {};
@@ -22,32 +22,32 @@ const RegistrationForm = () => {
       newErrors = {
         ...newErrors,
         email: "is invalid",
-      };
+      }
     }
 
     if (password.trim() == "") {
       newErrors = {
         ...newErrors,
         password: "is required",
-      };
+      }
     }
 
     if (passwordConfirmation.trim() === "") {
       newErrors = {
         ...newErrors,
         passwordConfirmation: "is required",
-      };
+      }
     } else {
       if (passwordConfirmation !== password) {
         newErrors = {
           ...newErrors,
           passwordConfirmation: "does not match password",
-        };
+        }
       }
     }
 
     setErrors(newErrors);
-  };
+  }
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -60,7 +60,7 @@ const RegistrationForm = () => {
           headers: new Headers({
             "Content-Type": "application/json",
           }),
-        });
+        })
         if (!response.ok) {
           const errorMessage = `${response.status} (${response.statusText})`;
           const error = new Error(errorMessage);
@@ -72,7 +72,7 @@ const RegistrationForm = () => {
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`);
     }
-  };
+  }
 
   const onInputChange = (event) => {
     setUserPayload({
@@ -86,7 +86,7 @@ const RegistrationForm = () => {
   }
 
   return (
-    <div className="grid-container">
+    <div className="grid-container" >
       <h1>Register</h1>
       <form onSubmit={onSubmit}>
         <div>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router";
+
+
 
 const SignOutButton = () => {
   const [shouldRedirect, setShouldRedirect] = useState(false);
@@ -32,6 +34,7 @@ const SignOutButton = () => {
 
   return (
     <button type="button" className="button" onClick={signOut}>
+      
       Sign Out
     </button>
   );
