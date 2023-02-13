@@ -11,7 +11,6 @@ const uniqueFunc = unique({
 });
 
  class User extends uniqueFunc(Model) {
-  // class User extends Model {
   static get tableName() {
     return "users";
   }
