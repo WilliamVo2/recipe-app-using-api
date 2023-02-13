@@ -26,7 +26,7 @@ const App = (props) => {
     fetchCurrentUser()
   }, [])
 
-  let greeting = "Hello to Recipe app"
+  let greeting = "Hello from Recipe app"
   if(currentUser) {
     greeting += `, ${currentUser.email}`
   }
