@@ -10,7 +10,7 @@ const uniqueFunc = unique({
   identifiers: ["id"],
 });
 
-class User extends uniqueFunc(Model) {
+ class User extends uniqueFunc(Model) {
   static get tableName() {
     return "users";
   }
@@ -29,7 +29,7 @@ class User extends uniqueFunc(Model) {
       required: ["email"],
 
       properties: {
-        email: { type: "string", format: "email" },
+        email: { type: "string" },
         cryptedPassword: { type: "string" },
       },
     };
