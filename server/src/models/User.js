@@ -26,13 +26,40 @@ const uniqueFunc = unique({
   static get jsonSchema() {
     return {
       type: "object",
-      required: ["email"],
+      required: ["email", "firstName", "lastName"],
 
       properties: {
+        firstName: { type: "string" },
+        lastName: { type: "string" },
         email: { type: "string" },
         cryptedPassword: { type: "string" },
+      }
+    }
+  }
+  static get relationMapping(){
+    const {UserRecipe, Recipe} = require("./index")
+    return {
+      userRecipes: {
+        relation: Model.HasManyRelation,
+        modelClass: UserRecipe,
+        join: {
+          from: "users.id",
+          to: "userRecipes.userId"
+        }
       },
-    };
+      recipes: {
+        relation: Model.ManyToManyRelation,
+        modelClass: Recipe,
+        join: {
+          from: "users.id",
+          through: {
+            from: "userRecipes.userId",
+            to: "userRecipes.recipeId"
+          },
+          to: "recipes.id"
+        }
+      }
+    }
   }
 
   $formatJson(json) {
