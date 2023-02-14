@@ -1,0 +1,41 @@
+[
+  {
+    "recipe": "Chicken Vesuvio",
+    "nutrient": "4 servings, protein 1057 kcal, fat 230g, carbs 274g"
+  },{
+    "recipe": "Chicken Paprikash",
+    "nutrient": "4 servings, protein 758 kcal, fat 236g, carbs 208g"
+  },
+  {
+    "recipe": "Baked Chicken",
+    "nutrient": "4 servings, protein 157 kcal, fat 117g, carbs 13g"
+  },
+  {
+    "recipe": "Catalan Chicken",
+    "nutrient": "4 servings, protein 278 kcal, fat 266g, carbs 276g"
+  },
+  {
+    "recipe": "Chicken Stew",
+    "nutrient": "4 servings, protein 411 kcal, fat 89-97g, carbs 70g"
+  },
+  {
+    "recipe": "Chicken Liver Pate",
+    "nutrient": "4 servings, protein 191 kcal, fat 60-76g, carbs 57g"
+  },
+  {
+    "recipe": "Roast sirloin of beef",
+    "nutrient": "6 servings, protein 353 kcal , fat 279g, carbs 88g"
+  },
+  {
+    "recipe": "Beef Tacos",
+    "nutrient": "8 servings, protein 233 kcal , fat 97g, carbs 101-147g"
+  },
+  {
+    "recipe": "Beef Brisket",
+    "nutrient": "8 servings, protein 308 kcal, fat 350g, carbs 78-92g"
+  },
+  {
+    "recipe": "Barbecued Beef Brisket",
+    "nutrient": "30 servings, protein 381 kcal, fat 278g, carbs 274g"
+  }
+]

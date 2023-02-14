@@ -10,6 +10,7 @@ import UserProfile from "./UserProfile.js"
 
 import AuthenticationRoute from "./authentication/AuthenticatedRoute.js"
 import TopBar from "./layout/TopBar";
+import ChartsContainer from "./ChartsContainer"
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -21,23 +22,14 @@ const App = (props) => {
       setCurrentUser(null)
     }
   }
-
   useEffect(() => {
     fetchCurrentUser()
   }, [])
-
-  let greeting = "Hello from Recipe app"
-  if(currentUser) {
-    greeting += `, ${currentUser.email}`
-  }
-
   return (
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/">
-          <h2>{greeting}</h2>
-        </Route>
+        <Route exact path="/" component={ChartsContainer} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticationRoute exact path="/profile" component={UserProfile} user={currentUser} />  
