@@ -17,6 +17,6 @@ exports.up = async (knex) => {
 /**
  * @param {Knex} knex
  */
-exports.down = async (knex) => {
+exports.down = (knex) => {
   return knex.schema.dropTableIfExists("recipes")
 }

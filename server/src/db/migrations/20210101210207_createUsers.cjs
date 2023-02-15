@@ -15,8 +15,6 @@ exports.up = async (knex) => {
     console.log(`Creating ${tableName}`);
     return knex.schema.createTable(tableName, (table) => {
       table.bigIncrements("id");
-      table.string("firstName").notNullable()
-      table.string("lastName").notNullable()
       table.string("email").notNullable().unique();
       table.string("cryptedPassword").notNullable();
       table.timestamp("createdAt").notNullable().defaultTo(knex.fn.now());
@@ -31,7 +29,7 @@ exports.up = async (knex) => {
 /**
  * @param {Knex} knex
  */
-exports.down = async (knex) => {
+exports.down = (knex) => {
   console.log(`Rolling back ${tableName}`);
   return knex.schema.dropTableIfExists(tableName);
 };

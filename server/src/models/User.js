@@ -27,14 +27,13 @@ const uniqueFunc = unique({
     return {
       type: "object",
       required: ["email", "firstName", "lastName"],
-
       properties: {
+        email: { type: "string" },
+        cryptedPassword: { type: "string" },
         firstName: { type: "string" },
         lastName: { type: "string" },
-        email: { type: "string" },
-        cryptedPassword: { type: "string" }
-      }
-    }
+      },
+    };
   }
   static get relationMapping(){
     const {UserRecipe, Recipe} = require("./index")

@@ -9,15 +9,15 @@ class UserRecipe extends Model {
     const { Recipe, User } = require("./index")
 
     return {
-      recipes: {
+      recipe: {
         relation: Model.BelongsToOneRelation,
-        modelClass: AbortController,
+        modelClass: Recipe,
         join: {
           from: "userRecipes.recipes",
           to: "recipes.id"
         }
       },
-      users: {
+      user: {
         relation: Model.BelongsToOneRelation,
         modelClass: User,
         join: {
