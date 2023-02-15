@@ -30,13 +30,13 @@ const uniqueFunc = unique({
       properties: {
         email: { type: "string" },
         cryptedPassword: { type: "string" },
-        firstName: { type: "string" },
-        lastName: { type: "string" },
-      },
-    };
+        firstName: { type: "string", minLength: 1 },
+        lastName: { type: "string", minLength: 1}
+      }
+    }
   }
   static get relationMapping(){
-    const {UserRecipe, Recipe} = require("./index")
+    const {UserRecipe, Recipe} = require("./index.js")
     return {
       userRecipes: {
         relation: Model.HasManyRelation,
