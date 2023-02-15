@@ -13,14 +13,14 @@ const RecipesLineChart = (props) => {
   return (
     <div className={"my-chart-container"}>
       <div>
-        <h2> RecipesLineChart</h2>
+        <h3> RecipesLineChart</h3>
         <Chart
           chartType='LineChart'
           data={data}
           options={{}}
           graph_id='LineChart'
           width='100%'
-          height='400px'
+          height='300px'
         />
       </div>
     </div>

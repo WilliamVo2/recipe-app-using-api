@@ -6,9 +6,9 @@ const RecipesPieChart = (props) =>{
   return (
     <div className="my-chart-container">
       <div>
-        <h2>RecipesPieChart</h2>
+        <h3>RecipesPieChart</h3>
         <Chart
-          width={'500px'}
+          width={'400px'}
           height={'300px'}
           chartType='PieChart'
           loader={<div>Loading Chart</div>}

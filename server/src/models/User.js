@@ -32,7 +32,7 @@ const uniqueFunc = unique({
         firstName: { type: "string" },
         lastName: { type: "string" },
         email: { type: "string" },
-        cryptedPassword: { type: "string" },
+        cryptedPassword: { type: "string" }
       }
     }
   }

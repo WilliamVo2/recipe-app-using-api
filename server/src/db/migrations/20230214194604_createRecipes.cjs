@@ -18,5 +18,5 @@ exports.up = async (knex) => {
  * @param {Knex} knex
  */
 exports.down = async (knex) => {
-  return knex.schema.dropTableIfExit("recipes")
+  return knex.schema.dropTableIfExists("recipes")
 }

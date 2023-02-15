@@ -23,4 +23,11 @@ recipesRouter.get("/", (req, res) =>{
   res.render("search", { recipesFound: recipesFound || [] })
 })
 
+// recipesRouter.get("/search", (req, res) => {
+
+//   await got("http://www.edamam.api.com/recipes/search?api_key=${process.env.EDAMAM_API_KEY}")
+
+
+// })
+
 export default recipesRouter
