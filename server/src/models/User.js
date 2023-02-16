@@ -36,7 +36,8 @@ const uniqueFunc = unique({
     };
   }
   static get relationMapping(){
-    const {UserRecipe, Recipe} = require("./index.js")
+    const {UserRecipe, Recipe, PantryItem, Ingredient} = require("./index.js")
+
     return {
       userRecipes: {
         relation: Model.HasManyRelation,
@@ -57,6 +58,23 @@ const uniqueFunc = unique({
           },
           to: "recipes.id"
         }
+      },
+      pantryItems: {
+        relation: Model.HasManyRelation,
+        modelClass: PantryItem,
+        join: {
+          from: "users.id",
+          to: "pantryItems.userId"
+        }
+      },
+      ingredients: {
+        relation: Model.ManyToManyRelation,
+        modelClass: Ingredient,
+        join: {
+          from: "users.id",
+          to: "pantryItems.ingredientId"
+        },
+        to: "ingredients.is"
       }
     }
   }

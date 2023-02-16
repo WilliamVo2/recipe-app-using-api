@@ -5,7 +5,6 @@ dotenv.config()
 const openRecipeApiKey=process.env.EDAMAM_API_KEY
 const openRecipeId=process.env.EDAMAM_API_ID
 const baseUrl= "https://api.edamam.com/api/recipes/v2"
-//const recipeSearchUrl= `${baseUrl}?type=public&q=diet&app_id=${openRecipeId}&app_key=%20${openRecipeApiKey}`
 
 class OpenRecipeClient {
   static async getRecipes(diet) {
