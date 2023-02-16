@@ -11,8 +11,8 @@ const DietRecipeIndex = props => {
 
   const fetchDiet = async () => {
     try {
-      const diet = "low-sodium"
-      const response = await fetch(`api/v1/diets?diet=${low-sodium}`)
+      const  method= "low-sodium"
+      const response = await fetch(`api/v1/diets?diet=${method}`)
       if(!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage);
@@ -39,7 +39,7 @@ const DietRecipeIndex = props => {
       })
     })();
   }, [])
-  //debugger
+  debugger
   return (
     <div className='container'>
       <h1>Diet Recipe Search</h1>

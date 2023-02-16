@@ -23,11 +23,4 @@ recipesRouter.get("/", (req, res) =>{
   res.render("search", { recipesFound: recipesFound || [] })
 })
 
-// recipesRouter.get("/search", async (req, res) => {
-
-//   const data = await got(`https://api.edamam.com/api/recipes/search?api_key=${process.env.EDAMAM_API_KEY}`).json()
-//   console.log(data)
-
-// })
-
 export default recipesRouter
