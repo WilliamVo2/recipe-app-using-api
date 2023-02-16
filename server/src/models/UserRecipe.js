@@ -13,7 +13,7 @@ class UserRecipe extends Model {
         relation: Model.BelongsToOneRelation,
         modelClass: Recipe,
         join: {
-          from: "userRecipes.recipes",
+          from: "userRecipes.recipeId",
           to: "recipes.id"
         }
       },

@@ -30,10 +30,10 @@ const TopBar = ({ user }) => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Our Team</Link>
+              <Link to="/diets">Our Team</Link>
             </li>
             <li>
-              <Link to="/">Project</Link>
+              <Link to="/search">Project</Link>
             </li>
             <li>
               <Link to="/">Contact</Link>
@@ -43,7 +43,7 @@ const TopBar = ({ user }) => {
       </div>
       <div className="searchBar">
           <form >
-              <input type='search' name='find' placeholder="Search query" />
+              <input type='search' name='find' id='find' placeholder="Search query" />
           </form>
         </div>
         <div className="buttonSearch">

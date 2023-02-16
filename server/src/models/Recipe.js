@@ -29,7 +29,7 @@ class Recipe extends Model {
         relation: Model.ManyToManyRelation,
         modelClass: User,
         join: {
-          from: "recipes.js",
+          from: "recipes.id",
           through: {
             from: "userRecipes.recipeId",
             to: "userRecipes.userId"

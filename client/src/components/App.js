@@ -11,6 +11,7 @@ import UserProfile from "./UserProfile.js"
 import AuthenticationRoute from "./authentication/AuthenticatedRoute.js"
 import TopBar from "./layout/TopBar";
 import ChartsContainer from "./ChartsContainer"
+import DietRecipeIndex from "./DietRecipeIndex"
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -30,6 +31,7 @@ const App = (props) => {
       <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/" component={ChartsContainer} />
+        <Route exact path="/diets" component={DietRecipeIndex} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticationRoute exact path="/profile" component={UserProfile} user={currentUser} />  
