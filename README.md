@@ -19,6 +19,6 @@ To set up:
                cd ..
                yarn run dev
 	Go to localhost:3000 in the chrome browser to see the app.
-  Go to "/recipes" to see implement of the list Recipe with the seach key "chickens" ingredient.
+  Go to "/search" to see implement of the list Recipe with the seach key "chickens" ingredient.
 	
 Author:  William Vo
