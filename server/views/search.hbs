@@ -1,0 +1,11 @@
+{{#if recipesFound.length }}
+  <h2>{{ recipesFound.length }} Chicken(s) Food on the Recipes List:</h2>
+  <ul>
+    {{#each recipesFound }}
+      {{ log this }}
+      <li>{{ this }}</li>
+    {{/each}}
+  </ul>
+  {{else}}
+    <h2>No food found based on your search.</h2>
+  {{/if}}

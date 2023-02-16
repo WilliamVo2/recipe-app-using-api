@@ -26,16 +26,21 @@ const App = (props) => {
     fetchCurrentUser()
   }, [])
 
+  let greeting = "Hello from Recipe app"
+  if(currentUser) {
+    greeting += `, ${currentUser.email}`
+  }
+
   return (
     <Router>
       <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/">
-          <h2>Hello from react</h2>
+          <h2>{greeting}</h2>
         </Route>
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <AuthenticationRoute exact path="/profile" component={UserProfile} user={currentUser} />
+        <AuthenticationRoute exact path="/profile" component={UserProfile} user={currentUser} />  
       </Switch>
     </Router>
   );

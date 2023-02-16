@@ -23,13 +23,34 @@ const TopBar = ({ user }) => {
   return (
     <div className="top-bar">
       <div className="top-bar-left">
-        <ul className="menu">
-          <li className="menu-text">App</li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
+        <div className="home-bar">
+          <ul className="menu">
+            {/* <li className="menu-text">App</li> */}
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">Our Team</Link>
+            </li>
+            <li>
+              <Link to="/">Project</Link>
+            </li>
+            <li>
+              <Link to="/">Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div className="searchBar">
+          <form >
+              <input type='search' name='find' placeholder="Search query" />
+          </form>
+        </div>
+        <div className="buttonSearch">
+          <label>
+            <button>Go!</button>
+          </label>
+        </div>
       <div className="top-bar-right">
         <ul className="menu">{user ? authenticatedListItems : unauthenticatedListItems}</ul>
       </div>

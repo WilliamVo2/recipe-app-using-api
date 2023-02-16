@@ -2,6 +2,23 @@
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
 // place global css here
+
+
+.searchBar {
+  width: 200px;
+  align-items: center;
+}
+.buttonSearch {
+  width: 70px;
+  align-items: center;
+  color: #1b3858
+}
+
+// .home-bar {
+//   width: 200px;
+//   //align-items: center;
+// }
+
 *,
 *::before,
 *::after {
@@ -12,3 +29,4 @@
   -moz-tab-size: 4;
   tab-size: 4;
 }
+
