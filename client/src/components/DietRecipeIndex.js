@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import DietRecipeTile from '../DietRecipeTile'
 
 const DietRecipeIndex = props => {
   
-  const [dietRecipes, setDietRecipes]= useState({
-    label: "",
-    ingredientLines: "",
-    ingredients: "",
-    images:""
-  })
+  const [dietRecipes, setDietRecipes]= useState([])
 
   const fetchDiet = async () => {
     try {
@@ -19,34 +15,29 @@ const DietRecipeIndex = props => {
         throw(error);
       }
       const dietRecipe = await response.json();
-      return dietRecipe;
+      setDietRecipes(dietRecipe.recipes)
     } catch (err) {
       console.error(`Error in fetchDiet: ${err.message}`);
     }
   }
-  let recipeData;
-  let ingredientLines;
-  let description;
+  
   useEffect(() => {
-    (async () => {
-      recipeData = await fetchDiet()
-      console.log(recipeData)
-      setDietRecipes({ 
-        images: recipeData.recipe[0].images,
-        description: recipeData.recipe[0].label,
-        ingredientLines: recipeData.recipe.ingredientLines,
-        ingredients: recipeData.recipe.ingredients
-      })
-    })();
-  }, [])
-  debugger
+    fetchDiet()  
+   } ,[])
+  
+   const  dietComponents = dietRecipes.map((dietObject) => {
+     return (
+       <DietRecipeTile
+         key={dietObject.id}
+         {...dietObject}
+       />
+     )
+   })
+ 
   return (
     <div className='container'>
       <h1>Diet Recipe Search</h1>
-      <p>{dietRecipes.images}</p>
-      <p>Content: {dietRecipes.description}</p>
-      <p>Instruction: {dietRecipes.ingredientLines}</p>
-      <p>Ingredients: {dietRecipes.ingredients}</p>
+      {dietComponents}
     </div>
   )
 }
