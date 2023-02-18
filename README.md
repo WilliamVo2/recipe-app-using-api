@@ -7,9 +7,9 @@
 	-Create, delete, and edit food recipes review.
 	-Create, delete, and edit food recipes.
 	-Upvote and downvote review.
-## To set up:
+### To set up:
 
-```no-highlight
+	```no-highlight
 	*Git clone repository. 
 	*Set up .env based on .env.example This will require you have an AWS.
 	*Run yarn install
@@ -19,9 +19,10 @@
 		yarn db:seed
 	*Navigate to the app root directory and run yarn dev
 	*Go to localhost:3000 in a browser to see the app.
-## Creator:
+	```
+### Creator:
 	William Vo
-## Technologies used:
+### Technologies used:
 	*Front End: ReactJS, Sass, HTML.
 	*Back End: NodeJS, Express, Objection, Knex.
          
