@@ -21,6 +21,7 @@
 	
 ### Creator:
 	William Vo
+	
 ### Technologies used:
 	*Front End: ReactJS, Sass, HTML.
 	*Back End: NodeJS, Express, Objection, Knex.
