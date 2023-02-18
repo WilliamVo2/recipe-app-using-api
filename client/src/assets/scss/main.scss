@@ -11,13 +11,22 @@
 .buttonSearch {
   width: 70px;
   align-items: center;
-  color: #1b3858
+  color: #1b3858;
 }
 
-// .home-bar {
-//   width: 200px;
-//   //align-items: center;
-// }
+.recipeLabel{
+  font-style: bold ;
+  font-size:x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: bisque;
+  text-align: center;
+}
+
+.bottomLeft {
+  //height: 200px;
+  float: left;
+  clear: left;
+}
 
 *,
 *::before,
