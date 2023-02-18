@@ -1,24 +1,26 @@
-# recipe-app-using-api
 Recipe App Using API
 An app to find the best recipe using API!
 Features:
-	Register, log in, and log out as a user
-	Create and change user image
-	View food recipes and reviews
-	Create, delete, and edit food recipes review
-	Create, delete, and edit food recipes
-	Upvote and downvote review
+	Register, log in, and log out as a user.
+	Create and change user image.
+	View food recipes and reviews.
+	Create, delete, and edit food recipes review.
+	Create, delete, and edit food recipes.
+	Upvote and downvote review.
 To set up:
-	Git clone repository 
-	Add .env in server with online UUID generate key
-	create the database by run : createdb recipe-app-using-api_development
-	Run: yarn install
-               cd server
-               yarn run migrate:latest
-               yarn run db:seed
-               cd ..
-               yarn run dev
-	Go to localhost:3000 in the chrome browser to see the app.
-  Go to "/search" to see implement of the list Recipe with the seach key "chickens" ingredient.
-	
-Author:  William Vo
+	Git clone repository. 
+	Set up .env based on .env.example. this will require you have an AWS.
+	Run yarn install
+	Run createdb recipe-app-using-api_development
+	Navigate to the app root directory, run:
+		yarn migrate:latest
+		yarn db:seed
+	Navigate to the app root directory and run yarn dev
+	Go to localhost:3000 in a broser to see the app.
+Creator:
+	William Vo
+Technologies used:
+	Front End: ReactJS, Sass, HTML.
+	Back End: NodeJS, Express, Objection, Knex.
+         
+               
