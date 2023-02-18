@@ -25,25 +25,24 @@ const TopBar = ({ user }) => {
       <div className="top-bar-left">
         <div className="home-bar">
           <ul className="menu">
-            {/* <li className="menu-text">App</li> */}
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Our Team</Link>
+              <Link to="/diets">Our Product</Link>
             </li>
             <li>
-              <Link to="/">Project</Link>
+              <Link to="/search">Project</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="/api/v1/diets">Contact</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="searchBar">
           <form >
-              <input type='search' name='find' placeholder="Search query" />
+              <input type='search' name='find' id='find' placeholder="Search query" />
           </form>
         </div>
         <div className="buttonSearch">

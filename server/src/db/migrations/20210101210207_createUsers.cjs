@@ -29,7 +29,7 @@ exports.up = async (knex) => {
 /**
  * @param {Knex} knex
  */
-exports.down = async (knex) => {
+exports.down = (knex) => {
   console.log(`Rolling back ${tableName}`);
   return knex.schema.dropTableIfExists(tableName);
 };
