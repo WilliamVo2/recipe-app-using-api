@@ -35,14 +35,6 @@ const UploadsList = (props) => {
     )
   })
 
-  // const handleInputChange = (event) => {
-  //   event.preventDefault()
-  //   setNewUploadFromData({
-  //     ...newUploadFromData,
-  //     [event.currentTarget.name]: event.currentTarget.value
-  //   })
-  // }
-
   const handleImageUpload = (acceptedImage) => {
     setNewUploadFromData({
       ...newUploadFromData,
@@ -98,10 +90,6 @@ const UploadsList = (props) => {
         </div>
     </div>
   )
-
-
-
-
 }
 
 export default UploadsList

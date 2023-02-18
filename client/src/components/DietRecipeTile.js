@@ -9,7 +9,7 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
         <hr/>
         <p className="recipeLabel"> <a href={url}>{label}</a></p>
         <img className ="bottomLeft" src={images.THUMBNAIL.url} />
-        <p className="">{ingredientLines}</p>
+        <p className=""><b>Ingredients: </b>{ingredientLines}</p>
       </div>
     </>
   )

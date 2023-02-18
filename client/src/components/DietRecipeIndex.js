@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import DietRecipeTile from '../DietRecipeTile'
+import DietRecipeTile from './DietRecipeTile'
 
 const DietRecipeIndex = props => {
   
