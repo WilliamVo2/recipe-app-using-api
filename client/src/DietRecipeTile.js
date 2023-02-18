@@ -5,9 +5,9 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
   return (
     <>
       <div className="dietTile">
-        <p><img src={images}/> {label}</p>
+        <p><img with="50" height="50" src={images} /> <a href={url}>{label}</a></p>
         <p>Instruction: {ingredientLines}</p>
-        <p><a href={url}>Link to the page</a></p>
+        
       </div>
     </>
   )

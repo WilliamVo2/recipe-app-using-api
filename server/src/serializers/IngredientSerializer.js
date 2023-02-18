@@ -1,7 +1,16 @@
 import PantryItemsSerializer from "./PantryItemsSerializer.js";
 
 class IngredientSerializer {
-  static async getSummary(ingredient) {
+  static getSummary(ingredient) {
+    const allowedAttributes = ["id", "name"]
+    let serializedIngredient = {}
+    for (const attribute of allowedAttributes) {
+      serializedIngredient[attribute] = ingredient[attribute]
+    }
+    return serializedIngredient
+  }
+
+  static async getSummaryWithIngredients(ingredient) {
     const allowedAttributes = ["id", "name"]
     let serializedIngredient = {}
     for (const attribute of allowedAttributes) {
