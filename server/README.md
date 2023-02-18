@@ -1,3 +1,30 @@
-The recipe app using API allows users to enter an ingredient, and the food search API generates the list of random food referer to this ingredient. 
+# Recipe App Using API
+  *An app to find the best recipe using API!
+## Features:
+-Register, log in, and log out as a user
+-Create and change user image
+-View food recipes and reviews
+-Create, delete, and edit food recipes review
+-Create, delete, and edit food recipes
+-Upvote and downvote review
+## To set up:
 
-Author: William Vo
+```no-highlight
+*Git clone repository 
+*Set up .env based on .env.example This will require you to have an AWS account.
+*Run yarn install
+*Run createdb recipe-app-using-api_development
+*Navigate to the server folder, cd sever
+*Run:  
+yarn migrate:latest
+yarn db:seed
+*Navigate to the app root directory, cd ..
+*Run yarn dev
+*Go to localhost:3000 in a browser to see the app.
+```
+
+## Creator: 	
+    	William Vo
+## Technologies used:
+	*Front End: ReactJS, Sass, HTML
+	*Back End: NodeJS, Express, Objection, Knex
