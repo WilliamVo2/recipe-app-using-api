@@ -1,4 +1,5 @@
 import React from "react"
+
 const AuthedUserProfile = (props) => {
 
   let message = ""
@@ -7,7 +8,8 @@ const AuthedUserProfile = (props) => {
   }
   
   return (
-    <>
+    <> 
+      <h1>ONLY SIGNED IN  USERS CAN SEE</h1>
       <h5>The current user is: {message} </h5>
     </>
   )
