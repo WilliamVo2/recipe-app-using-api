@@ -36,7 +36,7 @@ const App = (props) => {
         <Route exact path="/diets" component={DietRecipeIndex} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <AuthenticationRoute exact={true} path="/authed-profiles" component={AuthedUserProfile} user={currentUser} />  
+        <AuthenticatedRoute exact={true} path="/authed-profiles" component={AuthedUserProfile} user={currentUser} />  
       </Switch>
     </Router>
   );
