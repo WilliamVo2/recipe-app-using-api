@@ -5,7 +5,7 @@ const AuthedUserProfile = (props) => {
   if (props.user !== undefined) {
     message = props.user.email
   }
-
+  
   return (
     <>
       <h5>The current user is: {message} </h5>
