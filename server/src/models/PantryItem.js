@@ -4,7 +4,7 @@ class PantryItem extends Model {
   static get tableName() {
     return "pantryItems"
   }
-  
+
   static get relationMappings() {
     const { Ingredient, User } = require("./index.js")
 
@@ -22,7 +22,7 @@ class PantryItem extends Model {
         modelClass: User,
         join: {
           from: "pantryItems.userId",
-          to: "userId"
+          to: "users.id"
         }
       }
     }

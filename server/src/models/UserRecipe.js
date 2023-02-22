@@ -6,7 +6,7 @@ class UserRecipe extends Model {
   }
 
   static get relationMappings() {
-    const { Recipe, User } = require("./index")
+    const { Recipe, User } = require("./index.js")
 
     return {
       recipe: {
