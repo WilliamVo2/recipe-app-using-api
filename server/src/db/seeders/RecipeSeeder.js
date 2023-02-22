@@ -1,29 +1,34 @@
-import { Recipe, User } from "../../models/index.js";
+import { Recipe } from "../../models/index.js";
 
 class RecipeSeeder {
   static async seed() {
-    const user1 =await User.query().findOne({ email:"tommyjon@gmail.com"})
 
     const recipesData = [
       {
-        title: "Chicken Vesuvio",
+        title: "Chicken Vesuvio"
       },
       {
-        title: "Chicken Stew",
+        title: "Chicken Pot Pie Soup"
       },
       {
-        title: "Chicken Live Pate",
+        title: "Ramen Noodle Skillet with Steak"
       },
       {
-        title: "Beef Tacos",
+        title: "Instant Pot Turkey Sausage and Kale Soup"
       },
       {
-        title: "Beef Brisket",
+        title: "Beef Brisket"
       },
       {
-        title: "Barbecued Beef",
+        title: "Barbecued Beef"
       }
     ]
+    for (const recipesSeeder of recipesData) {
+      const currentRecipe = await Recipe.query().findOne({title: recipesSeeder.title})
+      if(!currentRecipe){
+        await Recipe.query().insert(recipesSeeder)
+      }
+    }
   }
 }
 

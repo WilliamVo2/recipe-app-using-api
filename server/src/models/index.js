@@ -5,5 +5,6 @@ const UserRecipe = require("./UserRecipe.js")
 const Ingredient = require("./Ingredient.js")
 const PantryItem = require("./PantryItem.js")
 const Upload = require("./Upload")
+const Quantity = require("./Quantity")
 
-module.exports = {User, Recipe, UserRecipe, Ingredient, PantryItem, Upload};
+module.exports = {User, Recipe, UserRecipe, Ingredient, PantryItem, Upload, Quantity};
