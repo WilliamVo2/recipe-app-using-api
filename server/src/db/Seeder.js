@@ -7,7 +7,6 @@ import PantryItemSeeder from "./seeders/PantryItemSeeder.js"
 import QuantitySeeder from "./seeders/QuantitySeeder.js"
 import UserRecipeSeeder from "./seeders/UserRecipeSeeder.js"
 
-
 class Seeder {
   static async seed() {
     // include individual seed commands here
