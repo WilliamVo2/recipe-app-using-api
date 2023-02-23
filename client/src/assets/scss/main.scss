@@ -4,11 +4,12 @@
 // place global css here
 
 
-form {
+.searchForm {
   align-items: center;
   height: 100%;
   display: flex;
   padding: 0 2em;
+  margin-top: 15.5px;
 }
 
 input[type="search"] {
@@ -44,9 +45,9 @@ aside {
   border-radius: 15px;
 }
 
-aside ul {
-  // list-style-type: none;
-  padding-left: 25px;
+.asides {
+  list-style-type: none;
+  padding-left: 15px;
 }
 aside li {
   padding-bottom: 10px;
@@ -59,6 +60,13 @@ aside a {
 h4 {
   padding:10px 20px;
 }
+
+.menu {
+  font: bolder;
+  font-size: larger;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 footer {
   margin-top: 10px;
   background-color: #cdd7e5;
@@ -80,6 +88,7 @@ footer p {
   float: left;
   clear: left;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .ingredient {
