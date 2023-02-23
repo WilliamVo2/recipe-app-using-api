@@ -36,7 +36,6 @@ const DietRecipeIndex = props => {
  
   return (
     <div className='container'>
-      <h1>Diet Recipe Search</h1>
       {dietComponents}
     </div>
   )

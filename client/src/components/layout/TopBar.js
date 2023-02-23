@@ -43,12 +43,8 @@ const TopBar = ({ user }) => {
       <div className="searchBar">
           <form >
               <input type='search' name='find' id='find' placeholder="Search query" />
+              <input type="submit" value="Search"></input>
           </form>
-        </div>
-        <div className="buttonSearch">
-          <label>
-            <button>Go!</button>
-          </label>
         </div>
       <div className="top-bar-right">
         <ul className="menu">{user ? authenticatedListItems : unauthenticatedListItems}</ul>
