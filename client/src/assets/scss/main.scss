@@ -40,8 +40,14 @@ aside {
   flex:1;
   margin-left: 10px;
   background-color: #ff0096 ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 15px;
 }
 
+aside ul {
+  // list-style-type: none;
+  padding-left: 25px;
+}
 aside li {
   padding-bottom: 10px;
 }
@@ -50,6 +56,9 @@ aside a {
   color: antiquewhite;
 }
 
+h4 {
+  padding:10px 20px;
+}
 footer {
   margin-top: 10px;
   background-color: #cdd7e5;
@@ -67,9 +76,15 @@ footer p {
   text-align: center;
 }
 
-.bottomLeft {
+.images {
   float: left;
   clear: left;
+  border-radius: 10px;
+}
+
+.ingredient {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: auto;
 }
 
 *,
