@@ -4,14 +4,59 @@
 // place global css here
 
 
-.searchBar {
-  width: 200px;
+form {
   align-items: center;
+  height: 100%;
+  display: flex;
+  padding: 0 2em;
 }
-.buttonSearch {
-  width: 70px;
-  align-items: center;
-  color: #1b3858;
+
+input[type="search"] {
+  flex: 3
+}
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #1b3858;
+  border: 0;
+  color: azure;
+}
+
+.dietTile {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex:1;
+  margin-left: 10px;
+  background-color: #ff0096 ;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+aside a {
+  color: antiquewhite;
+}
+
+footer {
+  margin-top: 10px;
+  background-color: #cdd7e5;
+}
+footer p {
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .recipeLabel{
@@ -23,7 +68,6 @@
 }
 
 .bottomLeft {
-  //height: 200px;
   float: left;
   clear: left;
 }
