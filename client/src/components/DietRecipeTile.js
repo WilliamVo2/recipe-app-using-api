@@ -9,11 +9,11 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
         <div className="main">
           <article>
             <p className="recipeLabel"> <a href={url}target="_blank">{label}</a></p>
-            <img className ="bottomLeft" src={images.THUMBNAIL.url} />
-            <p className=""><b>Ingredients: </b>{ingredientLines}</p>
+            <img className ="images" src={images.THUMBNAIL.url} />
+            <p className="ingredient"><b>Ingredients: </b>{ingredientLines}</p>
           </article>
           <aside>
-            <h2>References</h2>
+            <h4>References</h4>
             <ul>
               <li><a href="#">Your review</a></li>
               <li><a href="https://www.millcitypizza.com/" target="_blank">Pizza near You</a></li>
