@@ -4,9 +4,9 @@
 	-Register, log in, and log out as a user.
 	-Create and change user image.
 	-View food recipes and reviews.
-	-Create, delete, and edit food recipes review.
-	-Create, delete, and edit food recipes.
-	-Upvote and downvote review.
+	-Create a food recipes review.
+	-Search an ingredient in search box.
+	-Can view the current user if you log in.
 
 ### To set up:
 	*Git clone repository. 
