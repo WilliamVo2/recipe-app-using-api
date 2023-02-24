@@ -7,7 +7,7 @@ import RecipesPieChart from './RecipesPieChart'
 const ChartsContainer = (props) => {
   return (
     <div className='my-chart-container'>
-      <h1> RecipesChart </h1>
+      <h1> Recipe App Using API</h1>
       <div>
         <RecipesPieChart />
         <RecipesLineChart />
