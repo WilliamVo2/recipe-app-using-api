@@ -41,7 +41,7 @@ const TopBar = ({ user }) => {
         </div>
       </div>
       <div className="searchBar">
-          <form >
+          <form  className="searchForm">
               <input type='search' name='find' id='find' placeholder="Search query" />
               <input type="submit" value="Search"></input>
           </form>

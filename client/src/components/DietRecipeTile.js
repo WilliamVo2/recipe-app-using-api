@@ -14,14 +14,13 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
           </article>
           <aside>
             <h4>References</h4>
-            <ul>
-              <li><a href="#">Your review</a></li>
+            <ul className="asides">
               <li><a href="https://www.millcitypizza.com/" target="_blank">Pizza near You</a></li>
             </ul>
           </aside>
         </div>
         <footer>
-          <p>@Copyright 2023 by Bill. All rights reversed</p>
+          <p></p>
         </footer>
       </div>
     </>
