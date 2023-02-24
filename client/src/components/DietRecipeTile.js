@@ -15,8 +15,8 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
           <aside>
             <h4>References</h4>
             <ul className="asides">
-              <li><a href="#">Your review</a></li>
               <li><a href="https://www.millcitypizza.com/" target="_blank">Pizza near You</a></li>
+              <li><a href="#">Your review</a></li>
             </ul>
           </aside>
         </div>
