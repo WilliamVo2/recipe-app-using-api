@@ -3,7 +3,6 @@
 @include foundation-everything;
 // place global css here
 
-
 .searchForm {
   align-items: center;
   height: 100%;
@@ -31,6 +30,12 @@ input[type="submit"] {
 
 .main {
   display: flex;
+}
+
+.user-img {
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  margin-right: 2.5px;
 }
 
 article {

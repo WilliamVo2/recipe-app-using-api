@@ -6,13 +6,14 @@ import getCurrentUser from "../services/getCurrentUser"
 import "../assets/scss/main.scss"
 import RegistrationForm from "./registration/RegistrationForm"
 import SignInForm from "./authentication/SignInForm"
-import UserProfile from "./UserProfile.js"
+import ChangeUserImage from "../uploads/ChangeUserImage"
 
 import TopBar from "./layout/TopBar";
 import ChartsContainer from "./ChartsContainer"
 import DietRecipeIndex from "./DietRecipeIndex"
 import AuthenticatedRoute from "./authentication/AuthenticatedRoute.js"
 import AuthedUserProfile from "./AuthedUserProfile"
+
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -36,6 +37,7 @@ const App = (props) => {
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticatedRoute exact={true} path="/authed-profiles" component={AuthedUserProfile} user={currentUser} />  
+        <Route exact path="/users/image" component={ChangeUserImage} />
       </Switch>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormError from "../layout/FormError";
 import config from "../../config";
+import UploadUserImage from "../../uploads/UploadUserImage";
 
 const RegistrationForm = () => {
   const [userPayload, setUserPayload] = useState({
@@ -8,7 +9,8 @@ const RegistrationForm = () => {
     password: "",
     passwordConfirmation: "",
     firstName: "",
-    lastName: ""
+    lastName: "",
+    image: ""
   })
 
   const [errors, setErrors] = useState({});
@@ -69,13 +71,20 @@ const RegistrationForm = () => {
     event.preventDefault();
     validateInput(userPayload);
     console.log(userPayload)
+    const newUploadBody = new FormData()
+    newUploadBody.append("image", userPayload.image)
+    newUploadBody.append("email", userPayload.email)
+    newUploadBody.append("password", userPayload.password)
+    newUploadBody.append("passwordConfirmation", userPayload.passwordConfirmation)
+    newUploadBody.append("firstName", userPayload.firstName)
+    newUploadBody.append("lastName", userPayload.lastName)
     try {
       if (Object.keys(errors).length === 0) {
         const response = await fetch("/api/v1/users", {
           method: "post",
-          body: JSON.stringify(userPayload),
+          body: newUploadBody,
           headers: new Headers({
-            "Content-Type": "application/json",
+            "Accept": "image/jpeg",
           }),
         })
         if (!response.ok) {
@@ -156,6 +165,11 @@ const RegistrationForm = () => {
             />
             <FormError error={errors.passwordConfirmation} />
           </label>
+
+          <UploadUserImage
+            setUserPayLoad={setUserPayload}
+            userPayload={userPayload}
+          />
         </div>
         <div>
           <input type="submit" className="button" value="Register" />

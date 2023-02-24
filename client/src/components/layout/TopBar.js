@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import SignOutButton from "../authentication/SignOutButton"
+import UserProfileImage from "../UserProfileImage"
 
 const TopBar = ({ user }) => {
   const unauthenticatedListItems = [
@@ -15,7 +16,10 @@ const TopBar = ({ user }) => {
   ]
 
   const authenticatedListItems = [
-    <li key="sign-out">
+    <li key="user-img" className="top-bar-margin">
+      <UserProfileImage />
+    </li>,
+    <li key="sign-out" className="sign-out-button">
       <SignOutButton />
     </li>,
   ]
@@ -34,8 +38,8 @@ const TopBar = ({ user }) => {
             <li>
               <Link to="/search">Project</Link>
             </li>
-            <li>
-              <Link to="/api/v1/diets">Contact</Link>
+            <li key="change-image" className="top-bar-margin">
+              <Link to="/users/image">Change User Image</Link>
             </li>
           </ul>
         </div>
