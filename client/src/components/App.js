@@ -8,7 +8,6 @@ import RegistrationForm from "./registration/RegistrationForm"
 import SignInForm from "./authentication/SignInForm"
 import UserProfile from "./UserProfile.js"
 
-import AuthenticationRoute from "./authentication/AuthenticatedRoute.js"
 import TopBar from "./layout/TopBar";
 import ChartsContainer from "./ChartsContainer"
 import DietRecipeIndex from "./DietRecipeIndex"
