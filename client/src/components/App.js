@@ -13,6 +13,8 @@ import ChartsContainer from "./ChartsContainer"
 import DietRecipeIndex from "./DietRecipeIndex"
 import AuthenticatedRoute from "./authentication/AuthenticatedRoute.js"
 import AuthedUserProfile from "./AuthedUserProfile"
+import RecipeShow from "./RecipeShow"
+import RecipeListPage from "./RecipeListPage"
 
 
 const App = (props) => {
@@ -38,6 +40,8 @@ const App = (props) => {
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticatedRoute exact={true} path="/authed-profiles" component={AuthedUserProfile} user={currentUser} />  
         <Route exact path="/users/image" component={ChangeUserImage} />
+        <Route exact path="/recipes" component={RecipeListPage} />
+        <Route  exact path="/recipes/:id" component={RecipeShow} />
       </Switch>
     </Router>
   );

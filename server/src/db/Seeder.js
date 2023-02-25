@@ -6,6 +6,7 @@ import UserSeeder from "./seeders/UserSeeder.js"
 import PantryItemSeeder from "./seeders/PantryItemSeeder.js"
 import QuantitySeeder from "./seeders/QuantitySeeder.js"
 import UserRecipeSeeder from "./seeders/UserRecipeSeeder.js"
+import ReviewSeeder from "./seeders/ReviewSeeder.js"
 
 class Seeder {
   static async seed() {
@@ -16,6 +17,7 @@ class Seeder {
     await PantryItemSeeder.seed()
     await QuantitySeeder.seed()
     await UserRecipeSeeder.seed()
+    await ReviewSeeder.seed()
 
     console.log("Done!")
     await connection.destroy()
