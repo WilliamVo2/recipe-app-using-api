@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
+const DietRecipeTile = ({ label, ingredientLines, images, url })=> {
   
   return (
     <>
@@ -16,6 +16,7 @@ const DietRecipeTile = ({ id, label, ingredientLines, images, url })=> {
             <h4>References</h4>
             <ul className="asides">
               <li><a href="https://www.millcitypizza.com/" target="_blank">Pizza near You</a></li>
+              <li><Link to="/recipes">Review</Link></li>
             </ul>
           </aside>
         </div>
