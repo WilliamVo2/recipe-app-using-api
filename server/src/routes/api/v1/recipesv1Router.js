@@ -1,6 +1,4 @@
 import express from "express"
-import objection from "objection"
-const { ValidationError } = objection
 
 import { Recipe } from "../../../models/index.js"
 import recipeReviewsRouter from "./recipeReviewRouter.js"
@@ -29,10 +27,6 @@ recipesv1Router.get("/:id", async (req, res) => {
 
     return res.status(200).json({ recipe: serializedRecipe })
   } catch (err) {
-    console.log(err)
-    if (err instanceof ValidationError){
-      return err.status(422).json({ errors: err.data})
-    }
     return res.status(500).json({ errors: err})
   }
 })

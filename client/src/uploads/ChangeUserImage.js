@@ -46,7 +46,6 @@ const ChangeUserImage = (props) => {
   return (
     <div className="centered-content">
       <h5>Profile Image Uploads</h5>
-
       <form className="load primary" onSubmit={addUpload}>
         <Dropzone onDrop={handleImageUpload}>
           {({getRootProps, getInputProps})=>(

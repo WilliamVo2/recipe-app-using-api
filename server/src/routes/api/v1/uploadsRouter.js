@@ -1,5 +1,6 @@
 import express from "express"
-
+import objection from "objection"
+const { ValidationError } = objection
 import Upload from "../../../models/Upload.js"
 import uploadImage from "../../../services/uploadImage.js"
 
@@ -27,6 +28,9 @@ uploadsRouter.post("/", uploadImage.single("image"), async (req, res) => {
     const upload = await Upload.query().insertAndFetch(data)
     return res.status(201).json({ upload })
   } catch (error) {
+    if (error instanceof ValidationError){
+      return res.status(422).json({errors: error.data })
+    }
     return res.status(500).json({ errors: error })
   }
 })

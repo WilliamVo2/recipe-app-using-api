@@ -7,7 +7,7 @@ const RecipesLineChart = (props) => {
       ['Roast sirloin of beef', 279, 88],
       ['Beef Tacos', 97, 147],
       ['Beef Brisket', 350, 92],
-      ['Barbecued Beef Bristket', 278, 274]
+      ['Barbecued Beef Brisket', 278, 274]
     ]
   
   return (

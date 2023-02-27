@@ -18,7 +18,8 @@ class IngredientSeeder {
       },
       {
         name: "Ginger"
-      },{
+      },
+      {
         name: " Broccoli"
       },
       {

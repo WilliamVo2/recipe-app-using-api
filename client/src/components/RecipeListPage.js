@@ -34,7 +34,7 @@ const RecipeListPage = () =>{
 
   return(
     <div className="callout">
-      Food Recipes List from diet Recipes
+      <h2>Recipes List:</h2>
       {recipeTileComponents}
     </div>
   )

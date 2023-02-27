@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router";
 
-
-
 const SignOutButton = () => {
   const [shouldRedirect, setShouldRedirect] = useState(false);
 

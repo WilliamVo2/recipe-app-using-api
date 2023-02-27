@@ -77,7 +77,7 @@ const RecipeShow = props => {
 
   return (
     <div>
-      <div className="callout">
+      <div className="shows">
         <h1>{recipe.title}</h1>
       </div>
       <div>
@@ -87,7 +87,9 @@ const RecipeShow = props => {
         />
       </div>
       <h4> Recipe Review:</h4>
-      {reviewTiles} 
+        <ul>
+          {reviewTiles} 
+        </ul>
     </div>
   )
 }

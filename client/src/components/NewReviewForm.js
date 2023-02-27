@@ -27,23 +27,24 @@ const NewReviewForm = ({ postReview }) => {
 
   return (
     <div className="callout">
-      <h4>Your food recipes review:</h4>
       <form onSubmit={handleSubmit} >
         <label>
-          Reviewer:
+          <h5>Reviewer:</h5>
           <input 
             type="text" 
             name="reviewer" 
+            id="reviewer"
             onChange={handleInputChange} 
             value= {newReview.reviewer}
             />
         </label>
 
         <label>
-          Body:
+          <h6>Body:</h6>
           <input
             type="text"
             name="body"
+            id="body"
             onChange={handleInputChange}
             value={newReview.body}
           />

@@ -9,8 +9,7 @@
 	-Search recommendation diet food by enter an ingredient in search box.
 	-Can view the current user if you log in.
 	-Can vote, write review on rendering web page.
-	-Add a new review recipe.
-	-See data visualize, PieChart and LineChart.
+	-See data visualize in PieChart and LineChart.
 
 ### To set up:
 	*Git clone repository. 
