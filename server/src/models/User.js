@@ -33,7 +33,7 @@ const uniqueFunc = unique({
         firstName: { type: "string", minLength: 1 },
         lastName: { type: "string", minLength: 1}
       }
-    };
+    }
   }
   static get relationMapping(){
     const {UserRecipe, Recipe, PantryItem, Ingredient} = require("./index.js")

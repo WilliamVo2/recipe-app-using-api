@@ -16,7 +16,6 @@ import AuthedUserProfile from "./AuthedUserProfile"
 import RecipeShow from "./RecipeShow"
 import RecipeListPage from "./RecipeListPage"
 
-
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
   const fetchCurrentUser = async () => {
@@ -41,7 +40,7 @@ const App = (props) => {
         <AuthenticatedRoute exact={true} path="/authed-profiles" component={AuthedUserProfile} user={currentUser} />  
         <Route exact path="/users/image" component={ChangeUserImage} />
         <Route exact path="/recipes" component={RecipeListPage} />
-        <Route  exact path="/recipes/:id" component={RecipeShow} />
+        <Route exact path="/recipes/:id" component={RecipeShow} />
       </Switch>
     </Router>
   );
