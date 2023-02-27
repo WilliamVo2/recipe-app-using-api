@@ -47,7 +47,7 @@ context("api/v1/recipesv1Router", () => {
     beforeEach(() => {
       cy.task("db:truncate", "Recipe")
       cy.task("db:insert", {modelName: "Recipe", json: initialRecipes })
-      cy.task("db:find", { modelName: "Recipes", conditions: { title: "ChickenStew"}}).then((recipes) => {
+      cy.task("db:find", { modelName: "Recipe", conditions: { title: "ChickenStew"}}).then((recipes) => {
         showUrl = `/api/v1/recipes/${recipes[0].id}`
       })
     })
