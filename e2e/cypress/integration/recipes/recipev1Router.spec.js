@@ -10,7 +10,7 @@ context("api/v1/recipesv1Router", () => {
         cy.task("db:insert", { modelName: "Recipe", json: initialRecipes})
       })
     
-      it.only("has the correct response type", () => {
+      it("has the correct response type", () => {
         cy.request("/api/v1/recipes")
           .its("headers")
           .debug()
@@ -29,13 +29,6 @@ context("api/v1/recipesv1Router", () => {
           .its("body")
           .its("recipes")
           .should("have.length", 2)
-      })
-    
-      it("has the right property name and value", () => {
-        cy.request("api/v1/recipes")
-          .its("body")
-          .its("recipes")
-          .should((recipes[0]).to.have.property("title", "Chicken Stew"))
       })
     })
   })

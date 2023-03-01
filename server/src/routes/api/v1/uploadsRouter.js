@@ -26,11 +26,8 @@ uploadsRouter.post("/", uploadImage.single("image"), async (req, res) => {
     console.log(req.file.location)
 
     const upload = await Upload.query().insertAndFetch(data)
-    return res.status(201).json({ upload })
+    return res.status(200).json({ upload })
   } catch (error) {
-    if (error instanceof ValidationError){
-      return res.status(422).json({errors: error.data })
-    }
     return res.status(500).json({ errors: error })
   }
 })
