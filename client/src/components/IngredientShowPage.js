@@ -6,13 +6,12 @@ const IngredientShowPage = (props) => {
   const [ingredient, setIngredient] = useState({ recipes: [] })
   
   const id = props.match.params.id
-
+  
   const getIngredient = async () => {
     try {
       const response = await fetch(`/api/v1/ingredients/${id}`)
       if(!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
-
         const error = new Error(errorMessage)
         throw error
       }
