@@ -13,6 +13,7 @@ const IngredientOption = ({ id, name, optionQuantity, handleIngredientQuantity }
           id={id}
           type="radio"
           name={name}
+          value={count}
           checked={optionQuantity == count}
           onChange={handleIngredientQuantity}
         />
