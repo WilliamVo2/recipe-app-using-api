@@ -15,11 +15,12 @@
 * Git clone repository. 
 * Set up .env based on `.env.example` This will require you have an `AWS` account.
 * Run yarn install
-* Run createdb recipe-app-using-api_development
-* Navigate to the app root directory, run:
-		yarn migrate:latest
-		yarn db:seed
-* Navigate to the app root directory and run yarn dev
+* Run `createdb recipe-app-using-api_development`
+* Run:
+		`cd server`
+		`yarn migrate:latest`
+		`yarn db:seed`
+* Navigate to the app root directory and run `yarn dev`
 * Go to `localhost:3000` in a browser to see the app.
 	
 ### Creator:
